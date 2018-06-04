@@ -359,6 +359,16 @@ console.log('bev sizes' , bevSizes)
 return bevSizes
 }
 
+
+//this is for the landing page 
+const AllDunkinBevInfo = (drink)=>{
+    let bevObject= dunkin.find(elem => elem.beverage === drink);
+    console.log('be objevt ' , bevObject)
+    if (bevObject === undefined){
+    return []
+    }
+    return bevObject
+}
 const getDunkinCaffeine = (drink,size)=>{
 let bevObject= dunkin.find(elem => elem.beverage === drink);
 if (bevObject === undefined){
