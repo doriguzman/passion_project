@@ -215,7 +215,7 @@ render(){
               </p>
               
               
-             {brand1 &&beverage1 &&size1  ? <p> Caffeine: {caffeine1} </p>: ''}
+             {brand1 &&beverage1 &&size1  ? <p> Caffeine: {caffeine1}mg </p>: ''}
               </div>
 
              <div className='quicklook-2'>
@@ -259,7 +259,7 @@ render(){
 
               </p>
               
-             {brand2 &&beverage2 &&size2  ? <p> Caffeine: {caffeine2}</p>: ''}
+             {brand2 &&beverage2 &&size2  ? <p> Caffeine: {caffeine2}mg</p>: ''}
                   </div>
 
             

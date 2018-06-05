@@ -52,7 +52,7 @@ class LoginForm extends Component {
 
     return (
       <div className='login-user-container' id='loginsection'>
-        <div className='login-box'>
+
 
           <form onSubmit={this.submitForm}>
          <p> <h1>LOGIN </h1></p>
@@ -72,11 +72,13 @@ class LoginForm extends Component {
               required />
             <input type='submit' value='Log in' />
             {/* <input type='button' value='Guest' onClick={this.handleGuestLogin} /> */}
+            <a href='#home'> <p>Back To Top </p></a>
           </form>
+
 
           <p className='login-message'>{message}</p>
 
-        </div> {/* End login-box */}
+      
       </div>
     );
   }

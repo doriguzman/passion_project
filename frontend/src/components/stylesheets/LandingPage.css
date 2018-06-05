@@ -1,14 +1,14 @@
 .top-Landing-Div{
 width:100%;
 height:500px;
-background-color: #d2d2d2;;
+ background-color:#332a27;;
 color:black; 
 text-align:center;
 margin-top:-18px;
 }
 .middle-Landing-Div, .bottom-Landing-Div{
     color:white;
-    background-color:#1a1917;
+    background-color:#0e0c0c;
     font-family: 'Montserrat', sans-serif;
     margin-top:-18px;
     padding-top:25px;
@@ -51,7 +51,7 @@ margin-top:-18px;
 .horizontal-rule-caffeine{
     height: 2px;
     border: 0;
-    border-top: 2px solid rgb(250, 38, 38);
+    border-top: 3px solid #607d8b;
     /* margin: 1em 0; */
     padding: 0;
 }
