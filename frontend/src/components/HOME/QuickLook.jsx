@@ -170,34 +170,33 @@ render(){
         suggestedBeverages,
         suggestedSizes,
         size1,
-        size2 
+        size2, caffeine1, caffeine2
        
       } = this.state;
     return(
-        <div> 
-              <div className='quicklook-compare'> 
-
-              <div className="quicklook-brand-input">
-              <p>Brand*</p>
+        // <div> 
+              <div className='quicklook-Container'> 
+              <div className='quicklook-1'>
+              <img className='top-card-image' src={require('../images/coffee6.jpeg')} />
+              <p>Brand* {' '}
                 <Select
                   name="brand1"
                   values={this.brandValues}
                   selectedValue={brand1}
                   handleChange={this.handleSelectChange}
                 />
-              </div>
-
-             <div className='quicklook-beverage-input'>
-              <p>Beverage*</p>
+                </p>
+              
+              <p>Beverage* {' '}
               <Select
                 name="beverage1"
                 values={this.handleBeverages1()}
                 selectedValue={beverage1}
                 handleChange={this.handleSelectChange}
               />
-              </div>
-              <div className='quicklook-size-input'>
-              <p>Size*</p>
+                  </p>
+            
+              <p>Size* {' '}
               {beverage1 ? (
                 <Select
                   name="size1"
@@ -205,7 +204,7 @@ render(){
                   selectedValue={size1}
                   handleChange={this.handleSelectChange}
                 />
-              ) : (
+                ) : (
                 <Select
                   name="size1"
                   values={suggestedSizes}
@@ -213,38 +212,35 @@ render(){
                   handleChange={this.handleSelectChange}
                 />
               )}
+              </p>
+              
+              
+             {brand1 &&beverage1 &&size1  ? <p> Caffeine: {caffeine1} </p>: ''}
               </div>
 
-              <div className='caffeine'> 
-              <p> Caffeine:</p>
-             {brand1 &&beverage1 &&size1  ? this.state.caffeine1: ''}
-                  </div>
-              </div>
-
-            <div className='quicklook-compare'> 
-            <div className="quicklook-brand-input">
-              <p>Brand*</p>
+             <div className='quicklook-2'>
+             <img className='top-card-image' src={require('../images/coffee7.jpeg')} />               <p>Brand* {' '}
                 <Select
                   name="brand2"
                   values={this.brandValues}
                   selectedValue={brand2}
                   handleChange={this.handleSelectChange}
                 />
-              </div>
+              </p>
            
-              <div className='quicklook-beverage-input'> 
-                <p>Beverage*</p>
+             
+                <p>Beverage*
               <Select
                 name="beverage2"
                 values={this.handleBeverages2()}
                 selectedValue={beverage2}
                 handleChange={this.handleSelectChange}
               />
-            </div>
+              </p>
          
   
-              <div className='quicklook-size-input'>
-              <p>Size*</p>
+        
+              <p>Size*
               {beverage2 ? (
                 <Select
                   name="size2"
@@ -261,13 +257,10 @@ render(){
                 />
               )}
 
-              </div>
-              <div className='caffeine'> 
-              <p> Caffeine:</p>
-             {brand2 &&beverage2 &&size2  ? this.state.caffeine2: ''}
+              </p>
+              
+             {brand2 &&beverage2 &&size2  ? <p> Caffeine: {caffeine2}</p>: ''}
                   </div>
-
-              </div>
 
             
             </div>

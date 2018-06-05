@@ -1,6 +1,8 @@
+
+
 const starbucks = [
     {beverage: 'Pike Place Brewed Coffee', 
-    sizes:[{size: 'short', caffeine:155 } ,{size:'tall', caffeine: 235}, 
+    sizes:[{size: 'short', caffeine:155, img:'/Users/dorianguzman/Desktop/passion_project/frontend/src/components/images/starbucks-short.png' } ,{size:'tall', caffeine: 235, img:'https://starbuckssecretmenu.net/wp-content/uploads/2012/08/the-short-starbucks.jpg'}, 
     { size:'grande', caffeine:310}, {size:'venti', caffeine:410}]
  }, 
  {beverage: 'Blonde Roast', 
@@ -332,11 +334,20 @@ console.log(bevSizes)
 return bevSizes
 }
 
+const AllStarbsBevInfo = (drink)=>{
+    let bevObject= starbucks.find(elem => elem.beverage === drink);
+    console.log('be objevt ' , bevObject)
+    if (bevObject === undefined){
+    return []
+    }
+    return bevObject.sizes
+}
+
 const getStarbsCaffeine = (drink,size)=>{
 let bevObject= starbucks.find(elem => elem.beverage === drink);
 console.log(bevObject)
 if (bevObject === undefined){
-    return []
+    return ''
 }
 let bevSize= bevObject.sizes.find(elem =>elem.size===size)
 console.log(bevSize)
@@ -359,6 +370,16 @@ console.log('bev sizes' , bevSizes)
 return bevSizes
 }
 
+
+//this is for the landing page 
+const AllDunkinBevInfo = (drink)=>{
+    let bevObject= dunkin.find(elem => elem.beverage === drink);
+    console.log('be objevt ' , bevObject)
+    if (bevObject === undefined){
+    return ''
+    }
+    return bevObject.sizes
+}
 const getDunkinCaffeine = (drink,size)=>{
 let bevObject= dunkin.find(elem => elem.beverage === drink);
 if (bevObject === undefined){
@@ -371,8 +392,8 @@ console.log(bevSize)
 return bevSize.caffeine
 }
 export default {
-    starbsBevs, getStarbsSize, getStarbsCaffeine, dunkinBevs, 
-    getDunkinSize, getDunkinCaffeine
+    starbsBevs, getStarbsSize,AllStarbsBevInfo,  getStarbsCaffeine, dunkinBevs, 
+    getDunkinSize,AllDunkinBevInfo,  getDunkinCaffeine
   }
   
 

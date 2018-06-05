@@ -1,0 +1,68 @@
+.top-Landing-Div{
+width:100%;
+height:500px;
+background-color: #d2d2d2;;
+color:black; 
+text-align:center;
+margin-top:-18px;
+}
+.middle-Landing-Div, .bottom-Landing-Div{
+    color:white;
+    background-color:#1a1917;
+    font-family: 'Montserrat', sans-serif;
+    margin-top:-18px;
+    padding-top:25px;
+    padding-bottom: 20px;
+
+}
+.expand{
+    height:40px;
+}
+
+/* cards for single input */
+
+.Cards-Container, .quicklook-Container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    padding-top:20px;
+}
+
+.caffeine-card{
+    background-color:white;
+    border-radius:15px;
+    width:295px;
+}
+
+.top-card-image{
+    width: 295px;
+    height: 160px;
+    opacity:.9;
+    border-radius:4px;
+}
+.caffeine-card-text{
+    padding-top:10px;
+    color:black;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.horizontal-rule-caffeine{
+    height: 2px;
+    border: 0;
+    border-top: 2px solid rgb(250, 38, 38);
+    /* margin: 1em 0; */
+    padding: 0;
+}
+
+/* bottom part of the div to compare */
+
+.quicklook-1, .quicklook-2{
+    border: 4px solid grey;
+    height: 350px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    /* color:black */
+}

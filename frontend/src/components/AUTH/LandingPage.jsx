@@ -1,50 +1,70 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import QuickLook from "../HOME/QuickLook";
+import SingleCaffeine from "./SingleCaffeineCheck";
+import '../stylesheets/LandingPage.css'
 
+class LandingPage extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      expandSingle: false,
+      expandCompare: false
+    };
+  }
 
-class LandingPage extends React.Component{
-    constructor(){
-        super();
-        this.state={};
+  handleSingleExpand = e => {
+    this.setState({
+      expandSingle: !this.state.expandSingle,
+      expandCompare:false
+    });
+  };
+  handleCompareExpand = e => {
+    this.setState({
+      expandCompare: !this.state.expandCompare, 
+      expandSingle:false
+    });
+  };
+  render() {
+    const { expandSingle, expandCompare } = this.state;
+    console.log("expanding state", this.state);
+    return (
+      <div className="Landing-Divs">
+        <div className="top-Landing-Div">
+          <p>
+            {" "}
+           WELCOME TO THE CAFFEINE INTAKE TRACKER
+           SOME QUICK CAFFEINE FACTS ****HEREEEEE****
+          </p>
+          <button id="signup" onClick={this.props.setForm}>
+            sign up
+          </button>{" "}
+          to track your caffeine intake! Already have an account?
+          <button id="login" onClick={this.props.setForm}>
+            Login
+          </button>
+        </div>
 
-    }
+        <div className="middle-Landing-Div">
+          <p className='expand' onClick={this.handleSingleExpand}>
+            {" "}
+            Click <b>Here </b> to check a beverage's caffeine{" "}
+            <hr width="10%"/>
+          </p>
+         
 
-    render(){
-        return(
-            <div className= 'Landing-Divs'>
-                <div className= 'top-Landing-Div'>
-                    <p> this is where the short intro to the page is going to be and about what it does</p>
-                    <button id='signup' onClick={this.props.setForm}>
-                    sign up
-                    </button> to track your caffeine intake!
-                    Already have an account? 
-                    <button id = 'login' onClick ={this.props.setForm}>
-                    Login
-                    </button>
-                </div>
-
-                <div className='middle-Landing-Div'>
-                    <h2> Caffeine info on input drink </h2>
-                    <input type='text' />
-                </div>
-
-            <div className='bottom-Landing-Div'>
-
-                <div className='left-Comparison-Input'>
-                <input type='text'/>
-                </div>
-
-                    <h2> VS </h2>
-                
-                <div className= 'right-Comparison-Input'>
-                <input type='text'/>
-                </div>
-            </div>
-
-
-          
-            </div>
-        )
-    }
+          {expandSingle ? <SingleCaffeine /> : ""}
+        </div>
+        <div className="bottom-Landing-Div">
+          <p className='expand' onClick={this.handleCompareExpand}>
+            {" "}
+            Click <b>Here </b> to compare caffeine of two beverages
+            <hr width="10%"/>
+          </p>
+          {expandCompare ? <QuickLook /> : ""}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default LandingPage;
