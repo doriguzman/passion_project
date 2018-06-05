@@ -35,3 +35,8 @@ nav{
     text-shadow: 2px 2px white;
 
 }
+
+a{
+    color:black;
+    text-decoration:none;
+}

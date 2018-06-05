@@ -177,7 +177,7 @@ render(){
         // <div> 
               <div className='quicklook-Container'> 
               <div className='quicklook-1'>
-              <img className='top-card-image' src={require('../images/coffee6.jpeg')} />
+              <img className='quicklook-image' src={require('../images/coffee6.jpeg')} />
               <p>Brand* {' '}
                 <Select
                   name="brand1"
@@ -219,7 +219,7 @@ render(){
               </div>
 
              <div className='quicklook-2'>
-             <img className='top-card-image' src={require('../images/coffee7.jpeg')} />               <p>Brand* {' '}
+             <img className='quicklook-image' src={require('../images/coffee7.jpeg')} />               <p>Brand* {' '}
                 <Select
                   name="brand2"
                   values={this.brandValues}

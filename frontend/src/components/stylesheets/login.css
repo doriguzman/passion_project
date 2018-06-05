@@ -1,0 +1,44 @@
+.login-user-container {
+    /* padding-top: 60px; */
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    width: 100%;
+    padding-top: 240px;
+    padding-bottom: 240px;
+    /* background-color: #3c302c; */
+    background-color:#332a27
+    /* background-color: #000000d4; */
+    /* transition: 0.3s all; */
+}
+
+.login-user-container form {
+    /* background: linear-gradient(to bottom, rgba(34,35,34,1) 0%,rgba(18,22,22,1) 47%,rgba(3,5,3,1) 100%); */
+    background: linear-gradient(to bottom, rgba(40,31,27,1) 15%,rgba(35,27,23,1) 42%,rgba(28,20,19,1) 72%,rgba(22,17,15,1) 100%);
+        box-shadow: 7px 1px 30px 10px #1b110d;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+   
+}
+
+.login-user-container form input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    color: rgba(40, 60, 83, 0.8);
+    padding: 19px;
+    margin: 17px;
+    font-size: 24px;
+    /* -moz-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all; */
+}
+
+h1{
+    font-size:40px;
+}

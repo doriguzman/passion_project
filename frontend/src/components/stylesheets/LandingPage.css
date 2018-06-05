@@ -61,8 +61,16 @@ margin-top:-18px;
 .quicklook-1, .quicklook-2{
     border: 4px solid grey;
     height: 350px;
+    width:340px;
     border-radius: 15px;
     text-transform: uppercase;
     font-weight: 600;
     /* color:black */
+}
+
+.quicklook-image{
+    width: 340px;
+    height: 160px;
+    opacity:.9;
+    border-radius:4px;
 }

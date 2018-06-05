@@ -43,7 +43,7 @@ render(){
      <div className='navigation-backdrop'>
         <nav className="top-navigation">
           <div className="top-navigation-left">
-          <h3 onClick={this.setForm} id="login"> LOGIN </h3>
+          <a href='#loginsection' ><h3 onClick={this.setForm} id="login" > LOGIN </h3> </a>
             </div>
             <div className='top-navigation-middle'>
                  <img onClick={this.setForm} id="default" src= {require('../images/coffee-logo.png')} /></div>
