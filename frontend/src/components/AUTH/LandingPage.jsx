@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import QuickLook from "../HOME/QuickLook";
 import SingleCaffeine from "./SingleCaffeineCheck";
+import '../stylesheets/LandingPage.css'
 
 class LandingPage extends React.Component {
   constructor() {
@@ -13,12 +14,14 @@ class LandingPage extends React.Component {
 
   handleSingleExpand = e => {
     this.setState({
-      expandSingle: !this.state.expandSingle
+      expandSingle: !this.state.expandSingle,
+      expandCompare:false
     });
   };
   handleCompareExpand = e => {
     this.setState({
-      expandCompare: !this.state.expandCompare
+      expandCompare: !this.state.expandCompare, 
+      expandSingle:false
     });
   };
   render() {
@@ -29,8 +32,8 @@ class LandingPage extends React.Component {
         <div className="top-Landing-Div">
           <p>
             {" "}
-            this is where the short intro to the page is going to be and about
-            what it does
+           WELCOME TO THE CAFFEINE INTAKE TRACKER
+           SOME QUICK CAFFEINE FACTS ****HEREEEEE****
           </p>
           <button id="signup" onClick={this.props.setForm}>
             sign up
@@ -42,17 +45,20 @@ class LandingPage extends React.Component {
         </div>
 
         <div className="middle-Landing-Div">
-          <p onClick={this.handleSingleExpand}>
+          <p className='expand' onClick={this.handleSingleExpand}>
             {" "}
             Click <b>Here </b> to check a beverage's caffeine{" "}
+            <hr width="10%"/>
           </p>
+         
 
           {expandSingle ? <SingleCaffeine /> : ""}
         </div>
         <div className="bottom-Landing-Div">
-          <p onClick={this.handleCompareExpand}>
+          <p className='expand' onClick={this.handleCompareExpand}>
             {" "}
             Click <b>Here </b> to compare caffeine of two beverages
+            <hr width="10%"/>
           </p>
           {expandCompare ? <QuickLook /> : ""}
         </div>

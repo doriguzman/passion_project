@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import coffeesapi from "../coffeesapi";
+import CaffeineCards from './caffeineCards'
 
 class Select extends React.Component {
   render() {
@@ -24,10 +25,10 @@ class SingleCaffeine extends React.Component {
     this.state = {
       brand: "",
       beverage: "",
-      caffeineCards:''
-    //   suggestedSizes: "",
-    //   size: "",
-    //   caffeine: ""
+      caffeineCards: ""
+      //   suggestedSizes: "",
+      //   size: "",
+      //   caffeine: ""
     };
   }
   handleSelectChange = e => {
@@ -44,12 +45,12 @@ class SingleCaffeine extends React.Component {
         caffeine: ""
       });
     }
-    if (e.target.name === 'beverage'){
-        console.log('trying to see beverage', this.state.beverage)
-        this.handleCards(this.state.beverage)
+    if (e.target.name === "beverage") {
+      console.log("trying to see beverage", e.target.value);
+      this.handleCards(e.target.value);
     }
-  }
-  
+  };
+
   handleBeverages = () => {
     console.log("this.handleValues", this.state);
     const { brand } = this.state;
@@ -62,57 +63,50 @@ class SingleCaffeine extends React.Component {
     }
   };
 
-  handleCards = (beverage) => {
+  handleCards = beverage => {
     console.log("handleCards");
-    const { brand, beverage } = this.state;
+    const { brand } = this.state;
     if (brand === "Starbucks") {
-      if (beverage) {
-        this.setState({
-            caffeineCards:coffeesapi.AllDunkinBevInfo(beverage)
-        }) 
-      } else {
-        return [];
-      }
+      this.setState({
+        caffeineCards: coffeesapi.AllStarbsBevInfo(beverage)
+      });
     } else if (brand === "Dunkin Donuts") {
-      if (beverage) {
-        this.setState({
-            caffeineCards:coffeesapi.AllDunkinBevInfo(beverage)
-        }) 
-      } else {
-        return [];
-      }
+      this.setState({
+        caffeineCards: coffeesapi.AllDunkinBevInfo(beverage)
+      });
     }
   };
 
-  componentDidMount(){
-      this.handleCards()
-  }
-  render() {
-    const { brand, beverage, size, caffine, suggestedSizes } = this.state;
 
-    console.log("getting single drink caffeine", this.state);
+
+  render() {
+    const { brand, beverage, caffeineCards } = this.state;
+
     return (
       <div id="single-Caffeine-Container">
-        <p>Brand*</p>
-        <div className="brand-search-input">
+      {/* <div classname='single-caffeine-selecters'> */}
+        <p>Brand* {'  '}
+       
           <Select
             name="brand"
             values={this.brandValues}
             selectedValue={brand}
             handleChange={this.handleSelectChange}
           />
-        </div>
-        <p>Beverage*</p>
+        
+        </p>
+
+
+        <p>Beverage* {'  '}
         <Select
           name="beverage"
           values={this.handleBeverages()}
           selectedValue={beverage}
           handleChange={this.handleSelectChange}
         />
-
-
-        <div id ='bev-cards' >
-
+            </p>
+        <div id="bev-cards" >
+       {caffeineCards ? <CaffeineCards beverage ={beverage} cards={caffeineCards}/>:''}
 
         </div>
         {/* <p>Size*</p>
@@ -138,5 +132,4 @@ class SingleCaffeine extends React.Component {
   }
 }
 
-
-export default SingleCaffeine; 
+export default SingleCaffeine;
