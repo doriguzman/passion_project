@@ -85,7 +85,7 @@ class SingleCaffeine extends React.Component {
     return (
       <div id="single-Caffeine-Container">
       {/* <div classname='single-caffeine-selecters'> */}
-        <p>Brand* {'  '}
+        <p className='caffeine-input'><span>Brand*  </span>{'  '}
        
           <Select
             name="brand"
@@ -97,7 +97,7 @@ class SingleCaffeine extends React.Component {
         </p>
 
 
-        <p>Beverage* {'  '}
+        <p className='caffeine-input' > <span>Beverage* </span>
         <Select
           name="beverage"
           values={this.handleBeverages()}

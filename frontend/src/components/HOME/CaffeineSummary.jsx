@@ -60,7 +60,8 @@ class CaffeineSummary extends React.Component {
       return <div> </div>;
     } else {
       return (
-        <div className="table-inputs">
+        <div className="table-div">
+        <div className='table-inputs'>
         <table >
         <tr> 
             <th> Date </th>
@@ -86,15 +87,21 @@ class CaffeineSummary extends React.Component {
                 <td className="caffeine"> {elem.caffeine}</td>
                 <td className="intake_time"> {elem.intake_time}</td>
                 <td className="mood"> {elem.mood}</td>
-                <td className="sleep"> {elem.sleep}</td>
-                <td className='delete'> <button  onClick={e =>
+                <td className="sleep"> {elem.sleep} <button  id='delete'onClick={e =>
                         this.renderDeleteIntake(e, elem.intake_id)}>
                         x</button></td>
+                {/* <td className='delete'> <button  onClick={e =>
+                        this.renderDeleteIntake(e, elem.intake_id)}>
+                        x</button></td> */}
               </tr>
             );
           })}
         </table>
+        <div className='home-page-image'>
+        {/* <img src = {require('../images/home-coffee.jpg') }/> */}
         </div>
+        </div>
+      </div>
       );
     }
   }

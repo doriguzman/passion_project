@@ -1,0 +1,56 @@
+.beverage-form {
+  width: 600px;
+  margin: 0 auto;
+  border: 2px solid #332a27;
+  color: #655550;
+  font-size: 20px;
+  text-shadow: 1px 1px white;
+  font-weight: 600;
+}
+
+.size-button {
+  cursor: pointer;
+  /* padding: 30px 25px 30px 25px; */
+  border-radius: 10px;
+  width: 120px;
+  height: 55px;
+  background-color: white;
+  color: #655550;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 5px;
+  box-shadow: 4px 2px 19px rgba(0, 0, 0, 0.515);
+}
+/* .size-button:checked + .size-button{background:#fff;} */
+
+.size-button:hover {
+    background: #9b8887;
+    color: white;
+}
+
+.size-button:focus {
+  background-color: #332a27;
+  color:white;
+  text-shadow: 2px 2px black;
+
+  
+}
+
+.analysis{
+    padding-bottom:25px;
+    font-size: 18px;
+    font-style: italic;
+    color: #573635;
+    text-shadow: 1px 1px #e88886;
+}
+
+.caffeine-label{
+    padding-top: 30px;
+    /* padding-bottom: 10px; */
+    font-size: 18px;
+    font-style: italic;
+    color: #573635;
+    text-shadow: 1px 1px #e88886;
+
+}

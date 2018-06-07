@@ -72,11 +72,12 @@ class LoginForm extends Component {
               required />
             <input type='submit' value='Log in' />
             {/* <input type='button' value='Guest' onClick={this.handleGuestLogin} /> */}
-            <a href='#home'> <p>Back To Top </p></a>
+            <p className='login-message'>{message}</p>
+            <a className= 'redirect' href='#home'> <p>Back To Top </p></a>
           </form>
 
 
-          <p className='login-message'>{message}</p>
+         
 
       
       </div>

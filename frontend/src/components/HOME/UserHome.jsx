@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-// Components
 import UserHomeNavBar from './UserHomeNavBar';
 import CaffeineContainer from './CaffeineContainer'
-// import UserContainer from '../user/UserContainer.jsx';
-// import UserInfo from '../user/account/UserInfo.jsx';
 import { Route, Link, Switch, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import AddBevForm from './AddBevForm'
 import LandingPage from '../AUTH/LandingPage';
 import QuickLook from './QuickLook'
+import '../stylesheets/UserHome.css'
+import SingleCaffeine from '../AUTH/SingleCaffeineCheck';
 class UserHome extends React.Component{
     constructor(){
         super();
@@ -31,7 +30,12 @@ class UserHome extends React.Component{
 
     renderQuickLook = () =>{
         return (
+            <div className= 'quick-look-route-container'>
+            <h2 className='quick-look-headers'> View How much caffeine a drink has within it's different sizes </h2>
+            <SingleCaffeine setUser= {this.props.setUser}/>
+            <h2 className='quick-look-headers'> Compare caffeine differences </h2>
             <QuickLook setUser= {this.props.setUser} />
+            </div>
         )
     }
 

@@ -1,22 +1,55 @@
-.top-Landing-Div{
+.Landing-Divs{
+    height:100%;
+
+}
+top-Landing-Div{
 width:100%;
 height:500px;
- background-color:#332a27;;
+ background-color:#ebe3e0;
 color:black; 
 text-align:center;
 margin-top:-18px;
 }
 .middle-Landing-Div, .bottom-Landing-Div{
     color:white;
-    background-color:#0e0c0c;
+    /* background-color:#0e0c0c; */
     font-family: 'Montserrat', sans-serif;
     margin-top:-18px;
     padding-top:25px;
     padding-bottom: 20px;
+    box-shadow: 10px 19px 19px rgba(0, 0, 0, 0.515);
+    background-color: #ebe3e0;
+}
+
+h2{
+    padding-top:20px;
+    padding-bottom:10px;
+    font-size: 40px;
+    text-shadow: 2px 4px #ebb2b0;
+}
+
+h3{
+    text-shadow: 2px 2px #ebb2b0;
+    font-size: 22px;
+
+}
+
+.caffeine-facts{
+    padding: 18px;
+    font-size: 18px;
+    font-style: oblique;
+    font-weight: 600;
+
+}
+
+
+.bottom-Landing-Div{
+    padding-bottom: 10px;
 
 }
 .expand{
     height:40px;
+    padding:20px;
 }
 
 /* cards for single input */
@@ -52,27 +85,38 @@ margin-top:-18px;
 .horizontal-rule-caffeine{
     height: 2px;
     border: 0;
-    border-top: 3px solid #607d8b;
+    border-top: 1px solid #f74e50;
     /* margin: 1em 0; */
     padding: 0;
 }
-
+hr{
+    color:#f74e50
+}
 /* bottom part of the div to compare */
 
 .quicklook-1, .quicklook-2{
-    border: 4px solid grey;
-    height: 350px;
-    width:340px;
+    height: 420px;
+    width:420px;
     border-radius: 15px;
     text-transform: uppercase;
     font-weight: 600;
-    box-shadow: 7px 10px 50px 10px #4a60608c;
-    /* color:black */
+    box-shadow: 7px 5px 10px 0px #4a60608c;
+   background-color:white;
 }
 
+
 .quicklook-image{
-    width: 340px;
-    height: 160px;
+    width: 420px;
+    height: 190px;
     opacity:.9;
     border-radius:4px;
+}
+
+.quick-look-text{
+   padding-top:15px;
+   color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    display:flex;
+    flex-direction: column
 }

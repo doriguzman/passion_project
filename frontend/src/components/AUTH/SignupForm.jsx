@@ -137,7 +137,7 @@ class SignupForm extends Component {
             
           />
           <input type="submit" value="Sign Up" />
-          <a href='#home'> <p>Back To Top </p></a>
+          <a href='#home' className='redirect'> <p>Back To Top </p></a>
         </form>
       </div>
     );
