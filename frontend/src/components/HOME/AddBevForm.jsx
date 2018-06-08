@@ -325,9 +325,11 @@ class AddBevForm extends React.Component {
               )}{" "}
             </p>
 
-            <p onClick={this.handleExpand}>
+            <p onClick={this.handleExpand } className='mood-sleep-div'>
               {" "}
-              Click <b>Here </b>to record your sleep last night and mood today!
+              Click <b>Here </b>to record your sleep 
+              <br/>last night and mood today!
+              <hr className='horizontal-rule-mood-sleep' width='20%'/> 
             </p>
 
             {expand ? (
@@ -350,14 +352,6 @@ class AddBevForm extends React.Component {
                   handleChange={this.handleSelectChange}
                 />
                 <br />
-                <p>
-                  {" "}
-                  {this.state.caffeine ? (
-                    <MoodSleepAnalysis caffeine={this.state.caffeine} />
-                  ) : (
-                    ""
-                  )}{" "}
-                </p>
               </div>
             ) : (
               ""

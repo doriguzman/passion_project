@@ -85,13 +85,11 @@ h3{
 .horizontal-rule-caffeine{
     height: 2px;
     border: 0;
-    border-top: 1px solid #f74e50;
+    border-top: 2px solid rosybrown;
     /* margin: 1em 0; */
     padding: 0;
 }
-hr{
-    color:#f74e50
-}
+
 /* bottom part of the div to compare */
 
 .quicklook-1, .quicklook-2{
