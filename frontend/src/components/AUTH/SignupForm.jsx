@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 
+
 class SignupForm extends Component {
   constructor() {
     super();
@@ -90,10 +91,10 @@ class SignupForm extends Component {
     const errorMessage = message ? <p>{message}</p> : null;
 
     return (
-      <div className="signup-user-container " >
+      <div className="signup-user-container "  id='signupsection'>
         <form onSubmit={this.handleSubmit}>
           {errorMessage}
-       
+          <p> <h1>SIGN UP </h1></p>
             <input
               placeholder="First name"
               type="text"
@@ -128,7 +129,7 @@ class SignupForm extends Component {
             required
           />
            <input
-            placeholder="ya pic"
+            placeholder="Upload Picture"
             type="text"
             name="photo_url"
             value={photo_url}
@@ -136,6 +137,7 @@ class SignupForm extends Component {
             
           />
           <input type="submit" value="Sign Up" />
+          <a href='#home' className='redirect'> <p>Back To Top </p></a>
         </form>
       </div>
     );

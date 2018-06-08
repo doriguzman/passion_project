@@ -37,6 +37,7 @@ class MoodSleepAnalysis extends React.Component {
     console.log('matched' , matched);
     //getting only one value back
     if (matched.length === 1) {
+      console.log('one matched')
       this.setState({
         analysis: matched[0].sleep
       });
@@ -44,6 +45,7 @@ class MoodSleepAnalysis extends React.Component {
     //second part is if there is more than one thing that is going to be returned
 
     if (matched.length > 1) {
+      console.log('more than one')
       //want to get an array of all values of the hours of sleep
       let hours = matched
         .map(elem => elem.sleep)
@@ -58,7 +60,12 @@ class MoodSleepAnalysis extends React.Component {
 
   componentDidMount() {
     this.renderAllCaffeine();
+// this.props.caffeine
+
+    
+  
   }
+ 
 
   render() {
       const {retrievedData, analysis}= this.state
@@ -71,8 +78,8 @@ class MoodSleepAnalysis extends React.Component {
     );
 
 return(
-    <div>
-    {analysis ? <div>Your average amount of sleep when consuming this much caffeine is: {analysis} hours</div>:''}
+    <div className='analysis'>
+    {analysis ? <div>Your average amount of sleep when <br/>consuming this much caffeine is: {analysis} hour(s)</div>:''}
 
 </div>)
   

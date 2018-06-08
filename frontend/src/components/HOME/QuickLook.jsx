@@ -177,8 +177,9 @@ render(){
         // <div> 
               <div className='quicklook-Container'> 
               <div className='quicklook-1'>
-              <img className='top-card-image' src={require('../images/coffee6.jpeg')} />
-              <p>Brand* {' '}
+              <img className='quicklook-image' src={require('../images/coffee6.jpeg')} />
+              <div className='quick-look-text'>
+              <p className='caffeine-quicklook-input-top' ><span>Brand* {' '} </span>
                 <Select
                   name="brand1"
                   values={this.brandValues}
@@ -187,7 +188,7 @@ render(){
                 />
                 </p>
               
-              <p>Beverage* {' '}
+              <p className='caffeine-quicklook-input'><span>Beverage* {' '} </span>
               <Select
                 name="beverage1"
                 values={this.handleBeverages1()}
@@ -196,7 +197,7 @@ render(){
               />
                   </p>
             
-              <p>Size* {' '}
+              <p className='caffeine-quicklook-input'><span>Size* {' '} </span>
               {beverage1 ? (
                 <Select
                   name="size1"
@@ -215,11 +216,15 @@ render(){
               </p>
               
               
-             {brand1 &&beverage1 &&size1  ? <p> Caffeine: {caffeine1} </p>: ''}
+             {brand1 &&beverage1 &&size1  ? <p> Caffeine: {caffeine1}mg </p>: ''}
+              </div>
               </div>
 
              <div className='quicklook-2'>
-             <img className='top-card-image' src={require('../images/coffee7.jpeg')} />               <p>Brand* {' '}
+             <img className='quicklook-image' src={require('../images/coffee7.jpeg')} /> 
+             <div className='quick-look-text'>
+          
+                 <p className='caffeine-quicklook-input-top'><span>Brand* {' '} </span>
                 <Select
                   name="brand2"
                   values={this.brandValues}
@@ -229,7 +234,7 @@ render(){
               </p>
            
              
-                <p>Beverage*
+                <p className='caffeine-quicklook-input'><span>Beverage* </span>
               <Select
                 name="beverage2"
                 values={this.handleBeverages2()}
@@ -240,7 +245,7 @@ render(){
          
   
         
-              <p>Size*
+              <p className='caffeine-quicklook-input'><span> Size* </span>
               {beverage2 ? (
                 <Select
                   name="size2"
@@ -259,10 +264,10 @@ render(){
 
               </p>
               
-             {brand2 &&beverage2 &&size2  ? <p> Caffeine: {caffeine2}</p>: ''}
+             {brand2 &&beverage2 &&size2  ? <p> Caffeine: {caffeine2}mg</p>: ''}
                   </div>
 
-            
+            </div>
             </div>
         
     )

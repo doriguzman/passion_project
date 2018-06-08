@@ -113,7 +113,7 @@ class CaffeineGraph extends React.Component {
     return graphedData.length > 0 ? (
       <div>
         <div className="caffeine-graph-wrapper">
-          <h1> Caffeine Diary </h1>
+          <h1 className='caffeine-graph-header'> Caffeine Diary </h1>
           <ResponsiveContainer height={400}>
             <LineChart
               width={400}

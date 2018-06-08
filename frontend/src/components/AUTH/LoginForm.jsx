@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router'
 import { Link } from 'react-router-dom'
+import '../stylesheets/login.css'
 // import Profile from './Profile'
 // import './stylesheets/login.css'
 
@@ -16,20 +17,13 @@ class LoginForm extends Component {
     }
   }
 
-  // Handle input change
   handleInput = e => {
     this.setState({
       [e.target.name]: e.target.value
     })
   }
 
-  // // Handle guest login button 
-  // handleGuestLogin = () => {
-  //   this.setState({
-  //     email: 'guest',
-  //     passwordInput: '123456'
-  //   })
-  // }
+  
 
   submitForm = e => {
     e.preventDefault()
@@ -57,11 +51,11 @@ class LoginForm extends Component {
     console.log(this.state)
 
     return (
-      <div className='login-user-container'>
-        <div className='login-box'>
-          <h1 className='sitefont'>Caffeine Tracker</h1>
+      <div className='login-user-container' id='loginsection'>
+
 
           <form onSubmit={this.submitForm}>
+         <p> <h1>LOGIN </h1></p>
             <input
               placeholder='email'
               type='email'
@@ -78,11 +72,14 @@ class LoginForm extends Component {
               required />
             <input type='submit' value='Log in' />
             {/* <input type='button' value='Guest' onClick={this.handleGuestLogin} /> */}
+            <p className='login-message'>{message}</p>
+            <a className= 'redirect' href='#home'> <p>Back To Top </p></a>
           </form>
 
-          <p className='login-message'>{message}</p>
 
-        </div> {/* End login-box */}
+         
+
+      
       </div>
     );
   }

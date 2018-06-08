@@ -40,10 +40,10 @@ render(){
     return(
     <div className='authorization'>
      <div className="auth-container">
-     <div className='navigation-backdrop'>
+     <div className='navigation-backdrop' id='home'>
         <nav className="top-navigation">
           <div className="top-navigation-left">
-          <h3 onClick={this.setForm} id="login"> LOGIN </h3>
+          <a href='#loginsection' ><h3 onClick={this.setForm} id="login" > LOGIN </h3> </a>
             </div>
             <div className='top-navigation-middle'>
                  <img onClick={this.setForm} id="default" src= {require('../images/coffee-logo.png')} /></div>
@@ -51,9 +51,9 @@ render(){
 
           <div className="top-navigation-right">
             
-            <h3 onClick={this.setForm} id="signup">
+          <a href='#signupsection' ><h3 onClick={this.setForm} id="signup">
               SIGN UP
-            </h3>
+            </h3></a>
           </div>
         </nav>
         <h1 id='nav-intro'> Welcome to 

@@ -1,0 +1,123 @@
+
+.home-Container{
+    /* background-color:#0e0c0c; */
+    font-family: 'Montserrat', sans-serif;
+    margin-top:-18px;
+    padding-top:25px;
+    padding-bottom: 20px;
+    box-shadow: 10px 19px 19px rgba(0, 0, 0, 0.515);
+    background-color: #ebe3e0;
+    /* background: radial-gradient(ellipse at center, rgba(30,30,30,1) 15%,rgba(25,25,25,1) 42%,rgba(20,14,13,1) 72%,rgba(15,11,10,1) 100%); */
+    /* add an image of coffee cups at the bottom of the div */
+}
+
+/* EDITING ALL THE GRAPH ELEMENTS */
+.caffeine-graph-header{
+    color: white;
+    text-shadow: 2px 4px #ebb2b0;
+}
+
+.caffeine-graph-wrapper{
+    padding-top: 85px;
+    width: 100%;
+    height: 650px;
+    position: relative;
+    
+}
+
+.recharts-legend-item-text{
+    color:white; 
+    text-shadow: 2px 3px black;
+}
+
+
+
+/* EDITING ALL THE TABLE ELEMENTS  */
+.table-div{
+    /* padding-top:60px; */
+    /* background-color: #A2B19C; */
+    color:black;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    box-shadow: 0px 10px 200px #484443;
+}
+
+
+/* .table-inputs{
+    background-color: grey
+} */
+
+table{
+    padding:100px;
+}
+
+th, td{
+    text-align: center;
+    padding-right: 35px;
+    padding-left: 35px;
+    border-radius:2px;
+    padding-top: 30px;
+    /* background-color:#cb5453 */
+    background: linear-gradient(to bottom, rgba(198,101,101,1) 0%,rgba(196,104,104,1) 30%,rgba(198,101,101,1) 48%,rgba(203,84,83,1) 100%); 
+}
+
+
+/* QUICK LOOK FOR LOGGED IN USER */
+.quick-look-route-container{
+    color:white;
+    /* background-color:#0e0c0c; */
+    font-family: 'Montserrat', sans-serif;
+    padding-top:25px;
+    padding-bottom: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.quick-look-headers{
+    padding-top:50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px #ebb2b0;
+
+}
+
+#single-Caffeine-Container{
+    padding-top:30px;
+    padding-bottom:10px;
+}
+
+/* .caffeine-input{
+    display:flex;
+    margin-left: 45%;
+    padding-top:7px;
+} */
+
+span{
+    padding-right:10px;
+}
+.caffeine-quicklook-input{
+    /* margin-left:%; */
+    padding-top:3px;
+    padding-bottom:2px
+    
+
+}
+
+.caffeine-input{
+    font-size:20px;
+}
+.caffeine-quicklook-input top{
+    padding-top:2px;
+}
+
+#delete{
+    float:right;
+    margin-right: -15px;
+    margin-bottom: 15px;
+}
