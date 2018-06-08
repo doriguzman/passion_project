@@ -58,3 +58,17 @@
     text-shadow: 1px 1px #e88886;
 
 }
+
+.mood-sleep-div{
+  text-shadow: 2px 2px #ebb2b0;;
+}
+
+.horizontal-rule-mood-sleep{
+  
+    height: 2px;
+    border: 0;
+    border-top: 2px solid rosybrown;
+    /* margin: 1em 0; */
+    padding: 0;
+
+}
