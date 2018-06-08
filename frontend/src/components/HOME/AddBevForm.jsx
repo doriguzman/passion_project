@@ -43,7 +43,7 @@ class Sizes extends React.Component {
           {sizes.map(elem => {
             return (
               <button
-              className='size-button'
+                className="size-button"
                 value={elem}
                 onClick={handleChange}
                 name="size"
@@ -116,20 +116,15 @@ class AddBevForm extends React.Component {
       sleep: "",
       mood: "",
       submitted: false,
-      expand: false, 
-      clicked:false
+      expand: false,
+      clicked: false
     };
   }
-   
-
 
   handleSelectChange = e => {
- 
     this.setState({
       [e.target.name]: e.target.value
     });
-
-    
 
     if (e.target.name === "brand") {
       console.log("selecting brand , should clear state");
@@ -138,36 +133,55 @@ class AddBevForm extends React.Component {
         size: "",
         caffeine: ""
       });
-    } 
-     if (e.target.name === "beverage") {
+    }
+    if (e.target.name === "beverage") {
       this.setState({
         size: "",
         caffeine: ""
       });
     }
-    if (
-      this.state.brand === "Starbucks" &&
-      e.target.name === "size"
-    ) {
-      this.setState({
-        caffeine: coffeesapi.getStarbsCaffeine(
-          this.state.beverage,
-          e.target.value
-        )
-      });
-    }
-    if (
-      this.state.brand === "Dunkin Donuts" &&
-      e.target.name === "size"
-    ) {
-      this.setState({
-        caffeine: coffeesapi.getDunkinCaffeine(
-          this.state.beverage,
-          e.target.value
-        )
-      });
-    }
+
     
+
+    if (
+      (this.state.brand === "Starbucks"  &&this.state.beverage && this.state.caffeine && e.target.name === "size") ||
+      (!this.state.caffeine && e.target.name === "size" && this.state.brand === "Starbucks")
+    ) {
+      let targetValue = e.target.value;
+      this.setState(
+        {
+          caffeine: ""
+        },
+        () => {
+          this.setState({
+            caffeine: coffeesapi.getStarbsCaffeine(
+              this.state.beverage,
+              targetValue
+            )
+          });
+        }
+      );
+    }
+    if (
+      (this.state.brand === "Dunkin Donuts"  &&this.state.beverage && this.state.caffeine && e.target.name === "size") ||
+      (!this.state.caffeine && e.target.name === "size" && this.state.brand === "Dunkin Donuts")
+    ) {
+      let targetValue = e.target.value;
+      console.log(targetValue)
+      this.setState(
+        {
+          caffeine: ""
+        },
+        () => {
+          this.setState({
+            caffeine: coffeesapi.getDunkinCaffeine(
+              this.state.beverage,
+              targetValue
+            )
+          });
+        }
+      );
+    }
   };
 
   handleBeverages = () => {
@@ -182,23 +196,6 @@ class AddBevForm extends React.Component {
     }
   };
 
-  // handleSizes = () => {
-  //   console.log("in the handleSizes function");
-  //   const { brand, beverage } = this.state;
-  //   if (brand === "Starbucks") {
-  //     if (beverage) {
-  //       return coffeesapi.getStarbsSize(beverage);
-  //     } else {
-  //       return [];
-  //     }
-  //   } else if (brand === "Dunkin Donuts") {
-  //     if (beverage) {
-  //       return coffeesapi.getDunkinSize(beverage);
-  //     } else {
-  //       return [];
-  //     }
-  //   }
-  // };
 
   handleDateSelection = date => {
     moment(date)
@@ -310,13 +307,18 @@ class AddBevForm extends React.Component {
                 selectedValue={size}
                 handleChange={this.handleSelectChange}
               />
-            ) : ''
-            }
+            ) : (
+              ""
+            )}
 
-     {brand && beverage && size ? <p className='caffeine-label'> Caffeine: {caffeine} mgs</p> : ""}
+            {brand && beverage && size ? (
+              <p className="caffeine-label"> Caffeine: {caffeine} mgs</p>
+            ) : (
+              ""
+            )}
             <p>
               {" "}
-              {this.state.caffeine &&this.state.size? (
+              {this.state.caffeine && this.state.size ? (
                 <MoodSleepAnalysis caffeine={this.state.caffeine} />
               ) : (
                 ""

@@ -8,6 +8,10 @@
   font-weight: 600;
 }
 
+.react-calendar{
+  margin:0 auto 
+}
+
 .size-button {
   cursor: pointer;
   /* padding: 30px 25px 30px 25px; */

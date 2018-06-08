@@ -328,15 +328,12 @@ let bevObject= starbucks.find(elem => elem.beverage === drink);
 if (bevObject === undefined){
     return []
 }
-console.log(bevObject)
 let bevSizes= bevObject.sizes.map(elem =>elem.size)
-console.log(bevSizes)
 return bevSizes
 }
 
 const AllStarbsBevInfo = (drink)=>{
     let bevObject= starbucks.find(elem => elem.beverage === drink);
-    console.log('be objevt ' , bevObject)
     if (bevObject === undefined){
     return []
     }
@@ -345,13 +342,11 @@ const AllStarbsBevInfo = (drink)=>{
 
 const getStarbsCaffeine = (drink,size)=>{
 let bevObject= starbucks.find(elem => elem.beverage === drink);
-console.log(bevObject)
 if (bevObject === undefined){
     return ''
 }
 let bevSize= bevObject.sizes.find(elem =>elem.size===size)
-console.log(bevSize)
-// console.log('we trying to see the bevSizez' , bevSize.caffeine)
+console.log('we trying to see the bevSizez' , bevSize.caffeine)
 return bevSize.caffeine
 }
 
@@ -361,12 +356,10 @@ const dunkinBevs = ()=>{
 
 const getDunkinSize = (drink) =>{
 let bevObject= dunkin.find(elem => elem.beverage === drink);
-console.log('be objevt ' , bevObject)
 if (bevObject === undefined){
     return []
 }
 let bevSizes= bevObject.sizes.map(elem =>elem.size)
-console.log('bev sizes' , bevSizes)
 return bevSizes
 }
 
@@ -374,7 +367,6 @@ return bevSizes
 //this is for the landing page 
 const AllDunkinBevInfo = (drink)=>{
     let bevObject= dunkin.find(elem => elem.beverage === drink);
-    console.log('be objevt ' , bevObject)
     if (bevObject === undefined){
     return ''
     }
@@ -385,9 +377,7 @@ let bevObject= dunkin.find(elem => elem.beverage === drink);
 if (bevObject === undefined){
     return []
 }
-console.log(bevObject)
 let bevSize= bevObject.sizes.find(elem =>elem.size===size)
-console.log(bevSize)
 // console.log('we trying to see the bevSizez' , bevSize.caffeine)
 return bevSize.caffeine
 }
