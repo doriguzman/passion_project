@@ -1,29 +1,28 @@
-import React, {Component} from 'react';
-
-
+import React, { Component } from "react";
 
 class DisplaySummary extends Component {
-  
-    render() {
-        let retrieved = this.props.data
-      console.log(retrieved)
-        return ('')
+  render() {
+    let retrieved = this.props.data;
+    console.log(retrieved);
 
-// renderDisplay= ()=>{
-//     if (newRetrievedData!=={}){
-//       for (const key in newRetrievedData){
-//         return (
-//           <div> ${key}
-//           {display[key].map(elem=>elem)}
-//           </div>
-          
-//         )
-//       }
-//     }
-//   }
+    return('')
+    for (const key in retrieved) {
+      console.log(key);
 
-
+      retrieved[key].map(elem => {
+          return(
+        <div>
+          {" "}
+          <span>{elem.intake_time} </span>
+          <span> {elem.beverage} </span>
+          <span> {elem.caffeine}</span>
+        </div>
+          )
+        }
+      );
     }
+  }
 }
 
-export default DisplaySummary
+
+export default DisplaySummary;

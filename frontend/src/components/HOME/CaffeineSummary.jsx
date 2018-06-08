@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import axios from "axios";
 // import TableSummary from "./Table";
 import DisplaySummary from './DisplaySummary'
+import moment from 'moment';
+
 
 class CaffeineSummary extends React.Component {
   constructor() {
     super();
     this.state = {
       retrievedData: [], 
-      newRetrievedData:''
+      newRetrievedData:[]
     };
   }
 
@@ -138,7 +140,8 @@ class CaffeineSummary extends React.Component {
                     <td className="beverage"> {elem.beverage}</td>
                     <td className="size">{elem.size} </td>
                     <td className="caffeine"> {elem.caffeine}</td>
-                    <td className="intake_time"> {elem.intake_time}</td>
+                    <td className="intake_time"> {moment(elem.intake_time, 'HH:mm').format('h:mmA')}</td>
+
                     <td className="mood"> {elem.mood}</td>
                     <td className="sleep">
                       {" "}
