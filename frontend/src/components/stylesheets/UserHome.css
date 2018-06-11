@@ -49,8 +49,12 @@
     background-color: grey
 } */
 
-table{
-    padding:100px;
+th{
+    height:50px
+}
+
+td{
+    height:60px
 }
 
 th, td{
