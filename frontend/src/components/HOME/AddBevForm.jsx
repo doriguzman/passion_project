@@ -358,9 +358,9 @@ class AddBevForm extends React.Component {
             )}
             <br />
             {brand && beverage && size && date_consumed && time ? (
-              <button type="submit"> Submit </button>
+              <button type="submit" id='submit'> Submit </button>
             ) : (
-              <button type="submit" disabled>
+              <button type="submit" id='submit'disabled>
                 {" "}
                 Submit{" "}
               </button>

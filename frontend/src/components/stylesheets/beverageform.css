@@ -8,8 +8,16 @@
   font-weight: 600;
 }
 
-.react-calendar{
-  margin:0 auto 
+.react-calendar, button, .react-calendar__month-view__days__day--weekend{
+  margin:0 auto ;
+  color:grey;
+}
+.react-calendar__month-view__weekdays, .react-calendar__navigation button{
+  color:dimgrey;
+
+}
+.react-calendar__tile--active{
+  background: #e88886
 }
 
 .size-button {
@@ -72,3 +80,17 @@
     padding: 0;
 
 }
+
+#submit{
+  padding-top: 10px;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-family: Monserrat;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: dimgrey
+}
+
