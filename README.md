@@ -29,28 +29,28 @@ The problem this app resolves is that in which people usually intake a specific 
 * Sign up for an account or Login
 
 
-* ![Login](./readme_Images/caffeine_login.png) (./readme_Images/caffeine_signup.png)
+<img src="./readme_Images/caffeine_login.png" width = '290'/> <img src="./readme_Images/caffeine_login.png" width = '290'/> 
 
 * Log your caffeine beverage, hours of sleep the night before, as well as your mood for that day.
 * Upon selection of beverage, and size, if one had previously inputted the same details, the app calculates the average amount of sleep one had the night prior upon consumption!* 
 
-<img src="./readme_Images/caffeine_filledin_log.png" width=260/>
+<img src="./readme_Images/caffeine_filledin_log.png" />
 
 * Keep track of your intakes throughout the week on the data graph. 
- <img src="./readme_Images/caffeine_graph.png" width=260/>
+ <img src="./readme_Images/caffeine_graph.png" />
 
 
 * View past weeks intake on the graph summary below. 
-<img src="./readme_Images/caffeine_graph_summary.png" width=260/>
+<img src="./readme_Images/caffeine_graph_summary.png" />
 
 
  **Want just a general quick look about the caffeine in specific beverages?**
 
 * Use the top quick look feature to view the caffeine levels of different sizes of a specific beverage
-<img src="./readme_Images/caffeine_quicklook_top.png" width=260/>
+<img src="./readme_Images/caffeine_quicklook_top.png" />
 
 * Or use the bottom quick look feature to compare caffeine levels of two different beverages.*
- <img src="./readme_Images/caffeine_quicklook.png" width=260/>
+ <img src="./readme_Images/caffeine_quicklook.png" />
 
 
 
