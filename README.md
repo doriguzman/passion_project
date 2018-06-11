@@ -3,7 +3,7 @@
 Welcome to the Caffeine Intake Tracker. The wellness app that helps you become more aware of your caffeine intake along with your mood and sleep levels.
 
 ![landing page for app](./readme_Images/caffeine_home.png "Caffeine Intake Tracker Landing Page")
---- 
+
 
 ## Background
 
@@ -14,13 +14,13 @@ The problem this app resolves is that in which people usually intake a specific 
 
 - anything consumed in excess is harmful
 
--	 excess coffee, or highly caffeinated drinks could be correlated to health issues such as anxiety, stress, or insomnia. 
+- excess coffee, or highly caffeinated drinks could be correlated to health issues such as anxiety, stress, or insomnia. 
 
 -	In addition, the problem is not being educated enough on how much caffeine different drinks contain
 	- such as an iced latte vs. iced coffee
 	- different brands such as Starbucks vs. Dunkin Donuts. 
 
----
+
 
 ## Features 
 
@@ -29,10 +29,10 @@ The problem this app resolves is that in which people usually intake a specific 
 * Sign up for an account or Login
 
 
-<img src="./readme_Images/caffeine_login.png" width = '290'/> <img src="./readme_Images/caffeine_login.png" width = '290'/> 
+<img src="./readme_Images/caffeine_login.png" width = '330'/> <img src="./readme_Images/caffeine_signup.png" width = '330'/> 
 
 * Log your caffeine beverage, hours of sleep the night before, as well as your mood for that day.
-* Upon selection of beverage, and size, if one had previously inputted the same details, the app calculates the average amount of sleep one had the night prior upon consumption!* 
+*Upon selection of beverage, and size, if one had previously inputted the same details, the app calculates the average amount of sleep one had the night prior upon consumption!* 
 
 <img src="./readme_Images/caffeine_filledin_log.png" />
 
