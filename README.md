@@ -29,7 +29,8 @@ The problem this app resolves is that in which people usually intake a specific 
 * Sign up for an account or Login
 
 
-<img src="./readme_Images/caffeine_login.png" width = '330'/> <img src="./readme_Images/caffeine_signup.png" width = '330'/> 
+<img src="./readme_Images/caffeine_login.png" /> 
+<img src="./readme_Images/caffeine_signup.png" /> 
 
 * Log your caffeine beverage, hours of sleep the night before, as well as your mood for that day.
 *Upon selection of beverage, and size, if one had previously inputted the same details, the app calculates the average amount of sleep one had the night prior upon consumption!* 
