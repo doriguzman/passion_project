@@ -37,11 +37,10 @@ The problem this app resolves is that in which people usually intake a specific 
 <img src="./readme_Images/caffeine_filledin_log.png" />
 
 * Keep track of your intakes throughout the week on the data graph. 
+* View past weeks intake on the graph summary below. 
  <img src="./readme_Images/caffeine_graph.png" />
 
 
-* View past weeks intake on the graph summary below. 
-<img src="./readme_Images/caffeine_graph_summary.png" />
 
 
  **Want just a general quick look about the caffeine in specific beverages?**
