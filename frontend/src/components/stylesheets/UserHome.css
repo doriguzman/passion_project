@@ -3,24 +3,32 @@
     /* background-color:#0e0c0c; */
     font-family: 'Montserrat', sans-serif;
     margin-top:-18px;
-    padding-top:25px;
+    /* padding-top:25px; */
     padding-bottom: 20px;
     box-shadow: 10px 19px 19px rgba(0, 0, 0, 0.515);
     background-color: #ebe3e0;
+    /* position: absolute;
+    bottom: 0; */
+    /* height: 100vh; */
+    width:100%
     /* background: radial-gradient(ellipse at center, rgba(30,30,30,1) 15%,rgba(25,25,25,1) 42%,rgba(20,14,13,1) 72%,rgba(15,11,10,1) 100%); */
     /* add an image of coffee cups at the bottom of the div */
 }
 
 /* EDITING ALL THE GRAPH ELEMENTS */
+
+.table-inputs, table{
+    width:100%
+}
 .caffeine-graph-header{
     color: white;
     text-shadow: 2px 4px #ebb2b0;
 }
 
 .caffeine-graph-wrapper{
-    padding-top: 85px;
+    padding-top: 110px;
     width: 100%;
-    height: 650px;
+    height: 680px;
     position: relative;
     
 }
@@ -75,8 +83,10 @@ th, td{
     font-family: 'Montserrat', sans-serif;
     padding-top:25px;
     padding-bottom: 20px;
-    height: 100%;
+
+    height: 100vh;
     width: 100%;
+    overflow: auto;
 }
 
 
