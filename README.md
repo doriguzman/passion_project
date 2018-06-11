@@ -34,7 +34,7 @@ The problem this app resolves is that in which people usually intake a specific 
 * Log your caffeine beverage, hours of sleep the night before, as well as your mood for that day.
 * Upon selection of beverage, and size, if one had previously inputted the same details, the app calculates the average amount of sleep one had the night prior upon consumption!* 
 
-<img src="./readme_Images/caffeine_filledin_log.png" width=260/>
+<img src="./readme_Images/caffeine_filledin_log.png" />
 
 * Keep track of your intakes throughout the week on the data graph. 
  <img src="./readme_Images/caffeine_graph.png" width=260/>
