@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import CaffeineSummary from './CaffeineSummary';
+import {Link, Route} from 'react-router-dom'
+
 
 // import CustomLineDot from "./CustomLineDot";
 // import { changeNumberOfData } from "./utils";
@@ -164,7 +166,15 @@ class CaffeineGraph extends React.Component {
         <CaffeineSummary setUser={this.props.setUser}  getAllCaffeine={this.getAllCaffeine}  />
       </div>
     ) : (
-      <div> </div>
+      <div>    
+      <div className="caffeine-graph-wrapper">
+      <h1 className='empty-graph-add'> Your Caffeine Graph is currently empty! 
+      <br/>
+      <Link to="/addbeverage"  className='empty-graph-add'>Start <u>logging</u> your intake to view your habits. </Link>
+      </h1> 
+
+    </div>
+    </div>
     );
   }
 }
