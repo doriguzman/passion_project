@@ -8,7 +8,7 @@ Welcome to the Caffeine Intake Tracker. The wellness app that helps you become m
 ## Background
 
 
-The problem this app resolves is that in which people usually intake a specific amount of caffeine on a regular basis. But some people, like myself, do not realize if the amount of caffeine they intake is more than how much one should normally be consuming.
+The problem this app resolves is that people usually intake a specific amount of caffeine on a regular basis. But some people, like myself, do not realize if the amount of caffeine they intake is more than how much one should normally be consuming.
 
 *This is a problem because:*
 
