@@ -68,7 +68,7 @@ class LandingPage extends React.Component {
         <p className="expand" onClick={this.handleSingleExpand}>
             {" "}
             Click <b>Here </b> to check a beverage's caffeine{" "}
-            <hr className="horizontal-rule-caffeine" width="10%" />
+            <hr className="horizontal-rule-landing" width="10%" />
           </p>
 
           {expandSingle ? <SingleCaffeine /> : ""}
@@ -76,7 +76,7 @@ class LandingPage extends React.Component {
           <p className="expand" onClick={this.handleCompareExpand}>
             {" "}
             Click <b>Here </b> to compare caffeine of two beverages
-            <hr width="10%" />
+            <hr className="horizontal-rule-landing" width="10%" />
           </p>
           {expandCompare ? <QuickLook /> : ""}
         </div>
