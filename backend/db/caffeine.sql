@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS caffeine;
-CREATE DATABASE caffeine; 
+-- DROP DATABASE IF EXISTS caffeine;
+-- CREATE DATABASE caffeine; 
 
-\c caffeine
+-- \c caffeine
 
 DROP TABLE IF EXISTS Users,Intake; 
 
