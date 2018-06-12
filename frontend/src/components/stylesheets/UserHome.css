@@ -15,10 +15,26 @@
     /* add an image of coffee cups at the bottom of the div */
 }
 
+.caffeine-container{
+    height: 100vh
+}
 /* EDITING ALL THE GRAPH ELEMENTS */
 
 .table-inputs, table{
     width:100%
+}
+.empty-graph-header{
+    font-variant-caps:all-petite-caps;
+    margin-top: -40px;
+    padding: 100px;
+}
+
+.empty-graph-add {
+    color: white;
+    text-shadow: 2px 4px #ebb2b0;
+    font-style: italic;
+    font-size: 50px;
+    font-variant: all-petite-caps;
 }
 .caffeine-graph-header{
     color: white;
