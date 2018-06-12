@@ -1,11 +1,12 @@
 // const pgp = require("pg-promise")({});
 // const db = pgp("postgres://localhost/caffeine");
-// const authHelpers = require("../auth/helpers");
-// const passport = require("../auth/local");
+
 
 var pgp = require('pg-promise')({});
 var connectionString = process.env.DATABASE_URL;
 var db = pgp(connectionString);
+const authHelpers = require("../auth/helpers");
+const passport = require("../auth/local");
 
 // Information on all users
 const getAllUsers = (req, res, next) => {
