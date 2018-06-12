@@ -36,58 +36,59 @@ class CaffeineSummary extends React.Component {
     const { retrievedData } = this.state;
     axios.get("/users/getAllCaffeineIntake").then(data => {
       let newData = this.quicksort(data.data.apps).reverse();
+      console.log(newData, 'this is the quicksorted data')
       this.setState({
-        retrievedData: this.quicksort(data.data.apps).reverse()
+        retrievedData: newData
       });
 
-      let display = {};
-      console.log("helllooo", display, newData);
-      for (var i = 1; i <= newData.length; i++) {
-        let date = new Date(newData[i - 1].intake_date)
-          .toDateString()
-          .substring(4, 10);
-        display[date] = [];
-        // display[date]=newData[i-1]
-      }
+      // let display = {};
+      // console.log("helllooo", display, newData);
+      // for (var i = 1; i <= newData.length; i++) {
+      //   let date = new Date(newData[i - 1].intake_date)
+      //     .toDateString()
+      //     .substring(4, 10);
+      //   display[date] = [];
+      //   // display[date]=newData[i-1]
+      // }
 
-      for (var j = 1; j < newData.length; j++) {
-        console.log("newData", newData);
-        if (newData[j - 1].intake_date === newData[j].intake_date) {
-          console.log("truuueeeee", newData[j - 1].intake_date);
-          let matchedDate = new Date(newData[j - 1].intake_date)
-            .toDateString()
-            .substring(4, 10);
+      // for (var j = 1; j < newData.length; j++) {
+      //   console.log("newData", newData);
+      //   if (newData[j - 1].intake_date === newData[j].intake_date) {
+      //     console.log("truuueeeee", newData[j - 1].intake_date);
+      //     let matchedDate = new Date(newData[j - 1].intake_date)
+      //       .toDateString()
+      //       .substring(4, 10);
 
-          display[matchedDate].push(newData[j - 1]);
-          console.log("display", display);
-        } else {
-          let noMatch = new Date(newData[j].intake_date)
-            .toDateString()
-            .substring(4, 10);
-          display[noMatch].push(newData[j]);
-          console.log("nomatch", noMatch);
-        }
-      }
+      //     display[matchedDate].push(newData[j - 1]);
+      //     console.log("display", display);
+      //   } else {
+      //     let noMatch = new Date(newData[j].intake_date)
+      //       .toDateString()
+      //       .substring(4, 10);
+      //     display[noMatch].push(newData[j]);
+      //     console.log("nomatch", noMatch);
+      //   }
+      // }
 
-      console.log('FINAL DISPLAY', display)
-      for (const key in display) {
-        console.log(`display ${key}` , key);
-        console.log(display[key])
+      // console.log('FINAL DISPLAY', display)
+      // for (const key in display) {
+      //   console.log(`display ${key}` , key);
+      //   console.log(display[key])
       
-      }
+      // }
 
-      this.setState({
-        newRetrievedData: display
-      });
+      // this.setState({
+      //   newRetrievedData: display
+      // });
 
     });
   };
 
 
 
-  renderDisplay= ()=>{
-    return(<DisplaySummary data={this.state.newRetrievedData}/>)
-  }
+  // renderDisplay= ()=>{
+  //   return(<DisplaySummary data={this.state.newRetrievedData}/>)
+  // }
 
   renderDeleteIntake = (e, intake_id) => {
     //e.preventDefault();
@@ -96,7 +97,6 @@ class CaffeineSummary extends React.Component {
       this.renderCaffeineSummary();
       this.props.getAllCaffeine();
     });
-    //needing to rerender the graph as well, so
   };
   componentDidMount() {
     this.renderCaffeineSummary();

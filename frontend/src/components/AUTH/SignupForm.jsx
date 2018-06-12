@@ -88,7 +88,7 @@ class SignupForm extends Component {
       message, 
       photo_url
     } = this.state;
-    const errorMessage = message ? <p>{message}</p> : null;
+    const errorMessage = message ? <p className='message'>{message}</p> : null;
 
     return (
       <div className="signup-user-container "  id='signupsection'>
