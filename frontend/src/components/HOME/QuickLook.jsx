@@ -39,7 +39,6 @@ class QuickLook extends React.Component{
         this.setState({
           [e.target.name]: e.target.value
         })
-
         if (brand1 ==='Starbucks' && e.target.name ==='size1'){
             console.log(e.target.value )
             this.setState({
@@ -64,8 +63,9 @@ class QuickLook extends React.Component{
 
 
   handleBeverages1 = () => {
-    console.log("this.handleValues", this.state);
     const { brand1, brand2 } = this.state;
+
+    
     if (brand1 === "Starbucks" ) {
       return this.StarbsBevs;
     } else if(brand1 === 'Dunkin Donuts' ){
@@ -198,7 +198,7 @@ render(){
                   </p>
             
               <p className='caffeine-quicklook-input'><span>Size* {' '} </span>
-              {beverage1 ? (
+              {beverage1 &&brand1 ? (
                 <Select
                   name="size1"
                   values={this.handleSizes1()}
@@ -246,7 +246,7 @@ render(){
   
         
               <p className='caffeine-quicklook-input'><span> Size* </span>
-              {beverage2 ? (
+              {beverage2 && brand2? (
                 <Select
                   name="size2"
                   values={this.handleSizes2()}

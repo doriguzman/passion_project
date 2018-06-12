@@ -50,6 +50,8 @@ h3{
 .expand{
     height:40px;
     padding:20px;
+    font-size: 20px;
+    text-shadow: 2px 2px #ebb2b0;
 }
 
 /* cards for single input */
@@ -82,7 +84,7 @@ h3{
 
 }
 
-.horizontal-rule-caffeine{
+.horizontal-rule-landing{
     height: 2px;
     border: 0;
     border-top: 2px solid rosybrown;

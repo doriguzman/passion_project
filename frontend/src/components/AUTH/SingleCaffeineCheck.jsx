@@ -41,8 +41,8 @@ class SingleCaffeine extends React.Component {
       console.log("selecting brand , should clear state");
       this.setState({
         beverage: "",
-        size: "",
-        caffeine: ""
+        caffeine: "", 
+        caffeineCards:''
       });
     }
     if (e.target.name === "beverage") {
